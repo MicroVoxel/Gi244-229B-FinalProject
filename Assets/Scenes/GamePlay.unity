@@ -1632,6 +1632,7 @@ MonoBehaviour:
   dirtParticle: {fileID: 1120688231}
   jumpSfx: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   crashSfx: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  healSfx: {fileID: 8300000, guid: c69f192aed68a6e4ca0aa15649cabaed, type: 3}
   gameOver: 0
   hp: 3
   healthBar: {fileID: 52709237}
@@ -1697,7 +1698,7 @@ AudioSource:
   m_GameObject: {fileID: 383521441}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ecedb622cf76edd4ebe5a541f087e9e4, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -2886,13 +2887,13 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: LOW
+    - m_Text: Low
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: MEDIUM
+    - m_Text: Medium
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: HIGH
+    - m_Text: High
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -4504,6 +4505,7 @@ MonoBehaviour:
   gamePlay: {fileID: 1631611890}
   gamePause: {fileID: 1808718764}
   gameSetting: {fileID: 1451332820}
+  spawnManager: {fileID: 11781319}
   distance: 0
   disText: {fileID: 202461284}
   currentScoreText: {fileID: 709545865}

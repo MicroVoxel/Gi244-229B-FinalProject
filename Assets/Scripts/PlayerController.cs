@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip jumpSfx;
     public AudioClip crashSfx;
+    public AudioClip healSfx;
 
     private Rigidbody rb;
     private InputAction jumpAction;
@@ -72,11 +73,11 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.GetComponent<HealItem>())
         {
-            Debug.Log("GETHEAL");
+            ObstacleObjectPool.GetInstance().Return(collision.gameObject);
             HealItem item = collision.gameObject.GetComponent<HealItem>();
             hp += item.healAmount;
             healthBar.SetHp(hp);
-            ObstacleObjectPool.GetInstance().Return(collision.gameObject);
+            playerAudio.PlayOneShot(healSfx);
         }
 
         if (hp <= 0)

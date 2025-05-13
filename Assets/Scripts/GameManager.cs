@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public GameObject gamePause;
     public GameObject gameSetting;
 
+    public SpawnManager spawnManager;
+
     public int distance = 0;
     bool isSettingOpen = false;
 
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
         {
             gameEnd.SetActive(true);
             gamePlay.SetActive(false);
-            StopAllCoroutines();
+            spawnManager.StopAllCoroutines();
 
             currentScoreText.text = disText.text;
             SetHighScore();

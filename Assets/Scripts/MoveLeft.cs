@@ -35,7 +35,7 @@ public class MoveLeft : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
 
-        if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle") && gameObject.CompareTag("heal"))
+        if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle") || gameObject.CompareTag("heal"))
         {
             ObstacleObjectPool.GetInstance().Return(gameObject);
         }
