@@ -69,6 +69,16 @@ public class PlayerController : MonoBehaviour
             hp -= 1;
             healthBar.SetHp(hp);
         }
+
+        if (collision.gameObject.GetComponent<HealItem>())
+        {
+            Debug.Log("GETHEAL");
+            HealItem item = collision.gameObject.GetComponent<HealItem>();
+            hp += item.healAmount;
+            healthBar.SetHp(hp);
+            ObstacleObjectPool.GetInstance().Return(collision.gameObject);
+        }
+
         if (hp <= 0)
         {
             Debug.Log("Game Over!");

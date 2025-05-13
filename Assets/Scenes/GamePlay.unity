@@ -516,7 +516,7 @@ RectTransform:
   m_Father: {fileID: 52709233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -10, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -767,7 +767,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 66.98, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &202461284
 MonoBehaviour:
@@ -1103,6 +1103,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
@@ -2252,7 +2256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2894,7 +2898,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1451332822}
+      - m_Target: {fileID: 1091549560}
         m_TargetAssemblyTypeName: Setting, Assembly-CSharp
         m_MethodName: ChangeQuality
         m_Mode: 1
@@ -3446,7 +3450,7 @@ RectTransform:
   m_Father: {fileID: 552900395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.71428573, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4315,7 +4319,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1451332822}
+      - m_Target: {fileID: 1091549560}
         m_TargetAssemblyTypeName: Setting, Assembly-CSharp
         m_MethodName: ChangeVolume
         m_Mode: 1
@@ -4475,6 +4479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1091549559}
   - component: {fileID: 1091549558}
+  - component: {fileID: 1091549560}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4518,6 +4523,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 56684545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091549560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091549557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636be1f7bcd29e47b461ca08414330b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graphicDropdown: {fileID: 652832431}
+  volume: {fileID: 992782106}
+  audioMixer: {fileID: 24100000, guid: ecedb622cf76edd4ebe5a541f087e9e4, type: 2}
 --- !u!4 &1120688229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1419152992, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
@@ -5219,8 +5239,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 824048182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.71428573, y: 0}
+  m_AnchorMax: {x: 0.71428573, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5619,6 +5639,7 @@ MonoBehaviour:
   objPrefab:
   - {fileID: 5842114324701935107, guid: a0f4f1964968e794793346c5e8a07472, type: 3}
   - {fileID: 134104, guid: 145fc4a44d4b3114aa818f18795e210b, type: 3}
+  - {fileID: 8410608547934129085, guid: 517308ef66709f14f8945659b5d47d42, type: 3}
   - {fileID: 151096, guid: f0c41c97e3d7ab24db57539387e36cb8, type: 3}
   - {fileID: 1609270425926636, guid: 8e9f2e19b5a8bb94eaabd858b0a87fa5, type: 3}
   initPoolsize: 5
@@ -5647,14 +5668,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451332821}
-  - component: {fileID: 1451332822}
   m_Layer: 5
   m_Name: SettingMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1451332821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5675,21 +5695,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1451332822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451332820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1636be1f7bcd29e47b461ca08414330b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphicDropdown: {fileID: 652832431}
-  volume: {fileID: 992782106}
-  audioMixer: {fileID: 24100000, guid: ecedb622cf76edd4ebe5a541f087e9e4, type: 2}
 --- !u!1 &1539686314
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,7 +6235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1631611891
 RectTransform:
   m_ObjectHideFlags: 0

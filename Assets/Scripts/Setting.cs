@@ -9,14 +9,9 @@ public class Setting : MonoBehaviour
     public Slider volume;
     public AudioMixer audioMixer;
 
-    void Start()
+    private void Start()
     {
         audioMixer.SetFloat("master", volume.value);
-    }
-
-    void Update()
-    {
-        
     }
 
     public void ChangeVolume()

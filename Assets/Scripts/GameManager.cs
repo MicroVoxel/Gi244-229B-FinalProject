@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Prototype");
+        SceneManager.LoadScene("GamePlay");
     }
 
 }
