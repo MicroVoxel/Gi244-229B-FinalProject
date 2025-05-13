@@ -8,9 +8,14 @@ public class GameManager : MonoBehaviour
     public GameObject gameEnd;
     public GameObject gamePlay;
     public GameObject gamePause;
+    public GameObject gameSetting;
 
     public int distance = 0;
+    bool isSettingOpen = false;
+
     public TextMeshProUGUI disText;
+    public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI highScoreText;
 
     private void Awake()
     {
@@ -18,6 +23,7 @@ public class GameManager : MonoBehaviour
         gameEnd.SetActive(false);
         gamePlay.SetActive(false);
         gamePause.SetActive(false);
+        gameSetting.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -29,11 +35,37 @@ public class GameManager : MonoBehaviour
             gameEnd.SetActive(true);
             gamePlay.SetActive(false);
             StopAllCoroutines();
+
+            currentScoreText.text = disText.text;
+            SetHighScore();
+            highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         }
         else
         {
             distance += 1;
             disText.text = distance.ToString();
+        }
+    }
+
+    public void SettingOpen()
+    {
+        if (isSettingOpen == true)
+        {
+            gameSetting.SetActive(false);
+            isSettingOpen = false ;
+        }
+        else
+        {
+            gameSetting.SetActive(true);
+            isSettingOpen = true;
+        }
+    }
+
+    public void SetHighScore()
+    {
+        if (distance > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", distance);
         }
     }
 
